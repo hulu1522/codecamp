@@ -1,20 +1,34 @@
+<!doctype html>
 <html>
-	<head>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">			
-		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.js"></script>
 
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-		
-		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.js"></script>
-	</head>
-	<body>
-		<div id="aaaaa">
-			<h1>aaa</h1>
-		</div>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="media-queries.css">
+    <title>Clean Fuel Locations</title>
+</head>
+
+<body>
+    <h1>Clean Fuel Locations</h1>
+
+    <div id="fueltype">
+        <h4>Fuel Type:</h4>
+        <input type="radio" name="cng" value="naturalgas" id="naturalgas"><label for="naturalgas">Natural Gas</label>
+        <input type="radio" name="cng" value="hydrogen" id="hydrogen"><label for="hydrogen">Hydrogen</label>
+        <input type="radio" name="cng" value="tesla" id="tesla"><label for="tesla">Tesla</label>
+    </div>
+
+    <div id="zip">
+        <h4>Zip Code:</h4>
+        <input type="text" name="zip" placeholder="US ZIP ONLY: 84770">
+        <input type="submit" name="submit" value="Submit" id="submit">
+    </div>
+    
+    <div class="output" id="output">
+        
+    </div>
 
 
-		<script type="text/javascript" src="js/main.js"></script>
-	</body>
+</body>
 
 </html>

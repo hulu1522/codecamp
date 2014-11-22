@@ -1,0 +1,37 @@
+/*large screen*/
+@media only screen 
+    and (min-width:1680px) {
+        body {
+            text-align: center;
+        }
+}
+
+/*desktop laptop*/
+@media only screen 
+    and (min-width:1024px)
+    and (max-width:1680px) {
+        body {
+            text-align: center;
+        }
+
+}
+
+/*tablet*/
+@media only screen 
+    and (min-width:768px) 
+    and (max-width:1024px) {
+        body {
+            text-align: center;
+        }
+
+}
+
+/*phone*/
+@media only screen 
+    and (min-width:275px) 
+    and (max-width:768px) {
+        body {
+            text-align: center;
+        }
+
+}
