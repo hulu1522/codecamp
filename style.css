@@ -3,9 +3,10 @@ html {
 }
 
 body {
-    background-image: url('http://lorempixel.com/1920/1080/transport');
-    background-size: 100%;
-    background-repeat: no-repeat;
+    /*background-image: url('http://lorempixel.com/1920/1080/transport');*/
+    /*background-size: 100%;*/
+    /*background-repeat: no-repeat;*/
+    background-color: gray;
     color: rgb(255, 255, 255);
     min-width: 380px;
 }
