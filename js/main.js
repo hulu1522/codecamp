@@ -1,6 +1,4 @@
 function geoSuccess(position) {
-  console.log(position.coords.latitude)
-  console.log(position.coords.longitude)
   $("#output").html("");
   $("#output").append("latitude: "+position.coords.latitude.toString());
   $("#output").append("longitude: "+position.coords.longitude.toString());
@@ -14,7 +12,7 @@ function geoSuccess(position) {
 		success: function(data) {
 			console.log(data);
 			if (data.length < 1) {
-				$("#output").html("Your search returned No Results...")
+				$("#output").html("There are no Natural Gas stations within 15 miles of you.")
 			} else {
 
 				$("#output").html("There are "+data.length+" stations within 15 miles of you.")
@@ -46,8 +44,7 @@ function naturalGas(zip) {
 	if (zip != null && zip != "") {
 		api_url = api_url + "zip=" + zip
 	}
-	console.log()
-	console.log(api_url)
+	
 	$.ajax({
 		url: api_url, 
 		crossDomain: true,
