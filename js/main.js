@@ -14,20 +14,24 @@ function naturalGas(zip) {
 		dataType: "jsonp",
 		success: function(data) {
 			console.log(data);
-		 	// var r = data[0];
-		 	for (var i = 0; i < data.length; i++) {
-		 		var s = data[i]
-		 		var id = "location_"+s.ID
-		 		$("#output").append("<div id='"+id+"' class='location'></div>");
-				$("#"+id).append("<input type='checkbox' class='popUpControl popUp' id='"+id+"_input' onclick='show("+id+"_box)'>");
-				$("#"+id).append("<label for='"+id+"_input' id='"+id+"_info'>"+s.Name.toUpperCase()+" - "+s.City+", "+s.State+"</label>");
-				$("#"+id+"_info").append("<span class='box' id='"+id+"_box'></span>");
-				$("#"+id+"_box").append("<p>"+s.Address+"</p>");
-				$("#"+id+"_box").append("<p>"+s.City+", "+s.State+" "+s.Zip+"</p>");
-				$("#"+id+"_box").append("<p>"+s.Phone+"</p></br>");
-				$("#"+id+"_box").append("<p>Hours: "+s.Hours+"</p>");
-				$("#"+id+"_box").append("<p>Directions: "+s.Directions+"</p>");
-				document.getElementById(id+"_box").style.display = 'none'
+			// var r = data[0];
+			if (data.length < 1) {
+				$("#output").html("Your search returned No Results...")
+			} else {
+				for (var i = 0; i < data.length; i++) {
+					var s = data[i]
+					var id = "location_"+s.ID
+					$("#output").append("<div id='"+id+"' class='location'></div>");
+					$("#"+id).append("<input type='checkbox' class='popUpControl popUp' id='"+id+"_input' onclick='show("+id+"_box)'>");
+					$("#"+id).append("<label for='"+id+"_input' id='"+id+"_info'>"+s.Name.toUpperCase()+" - "+s.City+", "+s.State+"</label>");
+					$("#"+id+"_info").append("<span class='box' id='"+id+"_box'></span>");
+					$("#"+id+"_box").append("<p>"+s.Address+"</p>");
+					$("#"+id+"_box").append("<p>"+s.City+", "+s.State+" "+s.Zip+"</p>");
+					$("#"+id+"_box").append("<p>"+s.Phone+"</p></br>");
+					$("#"+id+"_box").append("<p>Hours: "+s.Hours+"</p>");
+					$("#"+id+"_box").append("<p>Directions: "+s.Directions+"</p>");
+					document.getElementById(id+"_box").style.display = 'none'
+				}
 			}
 		}
 	});
