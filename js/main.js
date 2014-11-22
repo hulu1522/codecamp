@@ -19,15 +19,24 @@ function funHydrogen(zip) {
 		 		var s = data[i]
 		 		var id = "location_"+s.ID
 		 		$("#output").append("<div id='"+id+"' class='location'></div>");
-				$("#"+id).append("<input type='checkbox' class='popUpControl popUp' id='"+id+"_input'>");
+				$("#"+id).append("<input type='checkbox' class='popUpControl popUp' id='"+id+"_input' onclick='show("+id+"_box)'>");
 				$("#"+id).append("<label for='"+id+"_input' id='"+id+"_info'>"+s.Name+"</label>");
 				$("#"+id+"_info").append("<span class='box' id='"+id+"_box'></span>");
-				$("#"+id+"_box").append("<p>  Location: "+s.City+", "+s.State+"</p>");
-				$("#"+id+"_box").append("<p>   Address: "+s.Address+"</p>");
-				$("#"+id+"_box").append("<p>     Phone: "+s.Phone+"</p>");
+				$("#"+id+"_box").append("<p>"+s.Address+"</p>");
+				$("#"+id+"_box").append("<p>"+s.City+", "+s.State+" "+s.Zip+"</p>");
+				$("#"+id+"_box").append("<p>"+s.Phone+"</p>");
 				$("#"+id+"_box").append("<p>     Hours: "+s.Hours+"</p>");
 				$("#"+id+"_box").append("<p>Directions: "+s.Directions+"</p>");
+				document.getElementById(id+"_box").style.display = 'none'
 			}
 		}
 	});
+}
+
+function show(target){
+	if (target.style.display.toString() == 'block') {
+		target.style.display = 'none'
+	} else {
+		target.style.display = 'block'
+	}
 }
