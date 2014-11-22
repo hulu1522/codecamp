@@ -1,6 +1,45 @@
+function geoSuccess(position) {
+  console.log(position.coords.latitude)
+  console.log(position.coords.longitude)
+  $("#output").html("");
+
+  var api_url = 'http://services.cngnow.com/V1/Stations.svc/external/circlefilter?'
+
+  $.ajax({
+		url: api_url+"latitued="+position.coords.latitude+"&longitude="+position.coords.longitude+"&range=15", 
+		crossDomain: true,
+		dataType: "jsonp",
+		success: function(data) {
+			console.log(data);
+			if (data.length < 1) {
+				$("#output").html("Your search returned No Results...")
+			} else {
+
+				$("#output").html("There are "+data.length+" stations within 15 miles of you.")
+
+				for (var i = 0; i < data.length; i++) {
+					var s = data[i]
+					var id = "location_"+s.ID
+					$("#output").append("<div id='"+id+"' class='location'></div>");
+					$("#"+id).append("<input type='checkbox' class='popUpControl popUp' id='"+id+"_input' onclick='show("+id+"_box)'>");
+					$("#"+id).append("<label for='"+id+"_input' id='"+id+"_info'>"+s.Name.toUpperCase()+" - "+s.City+", "+s.State+"</label>");
+					$("#"+id+"_info").append("<span class='box' id='"+id+"_box'></span>");
+					$("#"+id+"_box").append("<p>"+s.Address+"</p>");
+					$("#"+id+"_box").append("<p>"+s.City+", "+s.State+" "+s.Zip+"</p>");
+					$("#"+id+"_box").append("<p>"+s.Phone+"</p></br>");
+					$("#"+id+"_box").append("<p>Hours: "+s.Hours+"</p>");
+					$("#"+id+"_box").append("<p>Directions: "+s.Directions+"</p>");
+					document.getElementById(id+"_box").style.display = 'none'
+				}
+			}
+		}
+	});
+}
+
 function naturalGas(zip) {
 	$("#output").html("");
 
+	var gpsLoc = 
 	var api_url = 'http://services.cngnow.com/V1/Stations.svc/external/filter?'
 
 	if (zip != null && zip != "") {
@@ -65,3 +104,6 @@ function show(target){
 		target.style.background = 'lightgray';
 	}
 }
+
+navigator.geolocation.getCurrentPosition(geoSuccess)
+
