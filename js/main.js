@@ -24,7 +24,7 @@ function funHydrogen(zip) {
 				$("#"+id+"_info").append("<span class='box' id='"+id+"_box'></span>");
 				$("#"+id+"_box").append("<p>"+s.Address+"</p>");
 				$("#"+id+"_box").append("<p>"+s.City+", "+s.State+" "+s.Zip+"</p>");
-				$("#"+id+"_box").append("<p>"+s.Phone+"</p>");
+				$("#"+id+"_box").append("<p>"+s.Phone+"</p><br></br>");
 				$("#"+id+"_box").append("<p>     Hours: "+s.Hours+"</p>");
 				$("#"+id+"_box").append("<p>Directions: "+s.Directions+"</p>");
 				document.getElementById(id+"_box").style.display = 'none'
