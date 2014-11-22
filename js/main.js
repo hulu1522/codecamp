@@ -35,8 +35,9 @@ function funHydrogen(zip) {
 
 function show(target){
 	if (target.style.display.toString() == 'block') {
-		target.style.display = 'none'
+		target.style.display = 'none';
 	} else {
-		target.style.display = 'block'
+		target.style.display = 'block';
+		target.style.background = 'lightgray';
 	}
 }
