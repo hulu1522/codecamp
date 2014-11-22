@@ -4,15 +4,12 @@ html {
 }
 
 body {
-    /*background-image: url('http://lorempixel.com/1920/1080/transport');*/
-    /*background-size: 100%;*/
-    /*background-repeat: no-repeat;*/
     background-color: #fff;
     color: rgb(0, 0, 0);
     min-width: 380px;
     width:800px;
     margin: 0px auto;
-    padding: 20px;
+    padding-top: 20px;
 }
 
 div h4 {
