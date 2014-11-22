@@ -1,5 +1,5 @@
 function funHydrogen(zip) {
-	$("#output").html("<p></p>");
+	$("#output").html("");
 
 	var api_url = 'http://services.cngnow.com/V1/Stations.svc/external/filter?'
 
@@ -17,7 +17,10 @@ function funHydrogen(zip) {
 		 	// var r = data[0];
 		 	for (var i = 0; i < data.length; i++) {
 		 		var s = data[i]
-				$("#output").append("<p id='address_"+data[i].ID+"'>"+data[i].Address+"</p>");
+		 		var id = "location_"+s.ID
+		 		$("#output").append("<div id='"+id+"' class='location'></div>");
+				$("#"+id).append("<input type='checkbox' class='popUpControl popUp' id='"+id+"'>");
+				$("#"+id).append("<label for='"+id+"'>"+s.Name+"</label>");
 			}
 		}
 	});
