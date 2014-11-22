@@ -15,12 +15,16 @@ div h4 {
     display: inline;
 }
 
+.location:hover {
+    background-color:lightgray;
+}
+
 #submit{
     margin: 10px 0px;
     border : solid 2px #c7c7c7;
 	border-radius : 5px 5px 5px 5px ;
 	moz-border-radius : 5px 5px 5px 5px ;
-	font-size : 20px;
+	font-size : 10pt;
 	color : gray;
 	padding : 0px 10px;
 	background : #ffffff;
@@ -38,21 +42,27 @@ div h4 {
     border : solid 2px rgba(199, 199, 199, 0);
 	border-radius : 5px 5px 5px 5px ;
 	moz-border-radius : 5px 5px 5px 5px ;
-	font-size : 20px;
+	font-size : 10pt;
 	color : #c7c7c7;
-	padding : 2px 10px;
+	padding : 0px 10px;
     cursor:pointer;
 }
 
 .output {
     display: block;
-    margin: 0px auto;
-    width: 500px;
-    max-height: 400px;
+    margin: 10px auto;
+    width: 700px;
+    max-height: 800px;
     overflow-y: scroll;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 5px;
+    background-color: #ffffff;
+    border-radius: 3px;
     color: black;
+    text-align: left;
+}
+
+.location {
+    display: block;
+    padding: 10px;
 }
 
 #output::-webkit-scrollbar { width: 10px; height: 0px;}
@@ -65,12 +75,30 @@ div h4 {
 
 #output::-webkit-scrollbar-thumb { height: 50px; background-color: rgb(132, 132, 132); border-radius: 5px;}
 
-#output::-webkit-scrollbar-corner { background-color: #999;}}
+#output::-webkit-scrollbar-corner { background-color: #999;}
 
 
-label {
+label #zipcode{
     font-size: 12px;
 }
+
 #zipcode {
     width: 85px;
+}
+
+.popUpControl {
+    display: none;
+}
+
+.box p {
+    text-align: left;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+#location_*_input:checked ~ label > span:first-child {
+    display: none;
+}
+#location_*_input:checked ~ label:before {
+    content: "hello";
 }
