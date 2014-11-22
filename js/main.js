@@ -20,7 +20,7 @@ function funHydrogen(zip) {
 		 		var id = "location_"+s.ID
 		 		$("#output").append("<div id='"+id+"' class='location'></div>");
 				$("#"+id).append("<input type='checkbox' class='popUpControl popUp' id='"+id+"_input' onclick='show("+id+"_box)'>");
-				$("#"+id).append("<label for='"+id+"_input' id='"+id+"_info'>"+s.Name+"</label>");
+				$("#"+id).append("<label for='"+id+"_input' id='"+id+"_info'>"+s.Name.toUpperCase()+" - "+s.City+", "+s.State+"</label>");
 				$("#"+id+"_info").append("<span class='box' id='"+id+"_box'></span>");
 				$("#"+id+"_box").append("<p>"+s.Address+"</p>");
 				$("#"+id+"_box").append("<p>"+s.City+", "+s.State+" "+s.Zip+"</p>");
