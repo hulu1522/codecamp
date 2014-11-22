@@ -1,7 +1,5 @@
 function geoSuccess(position) {
   $("#output").html("");
-  $("#output").append("latitude: "+position.coords.latitude.toString());
-  $("#output").append("longitude: "+position.coords.longitude.toString());
 
   var api_url = 'http://services.cngnow.com/V1/Stations.svc/external/circlefilter?'
 
@@ -14,9 +12,6 @@ function geoSuccess(position) {
 			if (data.length < 1) {
 				$("#output").html("There are no Natural Gas stations within 15 miles of you.")
 			} else {
-
-				$("#output").html("There are "+data.length+" stations within 15 miles of you.")
-
 				for (var i = 0; i < data.length; i++) {
 					var s = data[i]
 					var id = "location_"+s.ID
@@ -99,7 +94,7 @@ function show(target){
 		target.style.display = 'none';
 	} else {
 		target.style.display = 'block';
-		target.style.background = 'lightgray';
+		target.style.background = 'rgba(61, 193, 61, 0.37)';
 	}
 }
 

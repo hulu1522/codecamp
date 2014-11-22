@@ -1,6 +1,6 @@
 html {
     min-width: 380px;
-    background-color: #c3c3c3;
+    background-image: url(images/green.jpg);
 }
 
 body {
@@ -10,15 +10,12 @@ body {
     width:800px;
     margin: 0px auto;
     padding-top: 20px;
+    border-radius: 10px;
 }
 
 div h4 {
     display: inline;
     margin: 10px;
-}
-
-.location:hover {
-    background-color:lightgray;
 }
 
 #submit{
@@ -39,24 +36,13 @@ div h4 {
 	filter : progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e6e6',GradientType=0 );
 }
 
-#submit:hover{
-    margin: 10px 0px;
-    border : solid 2px #c7c7c7;
-	border-radius : 5px 5px 5px 5px ;
-	moz-border-radius : 5px 5px 5px 5px ;
-	font-size : 10pt;
-	color : #797979;
-	padding : 0px 10px;
-    cursor:pointer;
-}
-
 .output {
     display: block;
     margin: 10px auto;
     width: 700px;
-    max-height: 800px;
     overflow-y: scroll;
-    background-color: #ffffff;
+    border : solid 2px rgba(146, 211, 146, 0.77);
+    background-color: rgb(255, 255, 255);
     border-radius: 3px;
     color: black;
     text-align: left;

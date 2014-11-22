@@ -3,6 +3,26 @@
     and (min-width:1680px) {
         body {
             text-align: center;
+            padding-bottom: 10px;
+        }
+        
+        .output {
+            max-height: 600px;
+        }
+        
+        .location:hover {
+            background-color:rgba(61, 193, 61, 0.37);
+        }
+        
+        #submit:hover{
+            margin: 10px 0px;
+            border : solid 2px #c7c7c7;
+            border-radius : 5px 5px 5px 5px ;
+            moz-border-radius : 5px 5px 5px 5px ;
+            font-size : 10pt;
+            color : #797979;
+            padding : 0px 10px;
+            cursor:pointer;
         }
 }
 
@@ -12,6 +32,26 @@
     and (max-width:1680px) {
         body {
             text-align: center;
+            padding-bottom: 10px;
+        }
+        
+        .output {
+            max-height: 600px;
+        }
+        
+        .location:hover {
+            background-color:lightgray;
+        }
+        
+        #submit:hover{
+            margin: 10px 0px;
+            border : solid 2px #c7c7c7;
+            border-radius : 5px 5px 5px 5px ;
+            moz-border-radius : 5px 5px 5px 5px ;
+            font-size : 10pt;
+            color : #797979;
+            padding : 0px 10px;
+            cursor:pointer;
         }
 
 }
@@ -22,6 +62,11 @@
     and (max-width:1024px) {
         body {
             text-align: center;
+            padding-bottom: 10px;
+        }
+        
+        .output {
+            font-size: 2em;
         }
 
 }
@@ -32,6 +77,13 @@
     and (max-width:768px) {
         body {
             text-align: center;
+            width: 100%;
+            padding-bottom: 10px;
+        }
+        
+        .output {
+            width: 100%;
+            font-size: 2em;
         }
 
 }
