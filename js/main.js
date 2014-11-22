@@ -8,7 +8,7 @@ function geoSuccess(position) {
   var api_url = 'http://services.cngnow.com/V1/Stations.svc/external/circlefilter?'
 
   $.ajax({
-		url: api_url+"latitued="+position.coords.latitude+"&longitude="+position.coords.longitude+"&range=15", 
+		url: api_url+"latitude="+position.coords.latitude.toString()+"&longitude="+position.coords.longitude.toString()+"&range=15", 
 		crossDomain: true,
 		dataType: "jsonp",
 		success: function(data) {
