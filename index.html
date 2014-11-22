@@ -18,7 +18,7 @@
 
     <div id="fueltype">
         <h4>Fuel Type:</h4>
-        <input type="radio" name="cng" value="naturalgas" id="naturalgas"><label for="naturalgas">Natural Gas</label>
+        <input type="radio" name="cng" value="naturalgas" id="naturalgas" checked="checked"><label for="naturalgas">Natural Gas</label>
         <input type="radio" name="cng" value="hydrogen" id="hydrogen"><label for="hydrogen">Hydrogen</label>
         <input type="radio" name="cng" value="tesla" id="tesla"><label for="tesla">Tesla</label>
     </div>
@@ -26,7 +26,7 @@
     <div id="zip">
         <h4>Zip Code:</h4>
         <input type="text" name="zip" id="zipcode" placeholder="US ZIP ONLY" autofocus="true">
-        <input type="submit" name="submit" value="Submit" id="submit" onclick="funHydrogen($('#zipcode').val())">
+        <input type="submit" name="submit" value="Submit" id="submit" onclick="fuelType($('#zipcode').val())">
     </div>
     
     <div class="output" id="output">

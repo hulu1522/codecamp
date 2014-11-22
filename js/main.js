@@ -1,4 +1,4 @@
-function funHydrogen(zip) {
+function naturalGas(zip) {
 	$("#output").html("");
 
 	var api_url = 'http://services.cngnow.com/V1/Stations.svc/external/filter?'
@@ -31,6 +31,26 @@ function funHydrogen(zip) {
 			}
 		}
 	});
+}
+
+function hydrogenGas(zip) {
+	$("#output").html("This is a search for Hydrogen Stations!!")
+}
+
+function teslaElectric(zip) {
+	$("#output").html("This is a search for Tesla Charging Stations!!")
+}
+
+function fuelType(zip) {
+	if ($('#naturalgas')[0].checked) {
+		naturalGas(zip)
+	}
+	if ($('#hydrogen')[0].checked) {
+		hydrogenGas(zip)
+	}
+	if ($('#tesla')[0].checked) {
+		teslaElectric(zip)
+	}
 }
 
 function show(target){
