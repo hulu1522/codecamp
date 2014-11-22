@@ -17,7 +17,7 @@ function funHydrogen(zip) {
 		 	// var r = data[0];
 		 	for (var i = 0; i < data.length; i++) {
 		 		var s = data[i]
-				$("#demo").append("<p id='address_"+data[i].ID+"'>"+data[i].Address+"</p>");
+				$("#output").append("<p id='address_"+data[i].ID+"'>"+data[i].Address+"</p>");
 			}
 		}
 	});
