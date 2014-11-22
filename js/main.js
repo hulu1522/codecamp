@@ -1,5 +1,5 @@
 function funHydrogen(zip) {
-	$("#demo").html("<p></p>");
+	$("#output").html("<p></p>");
 
 	var api_url = 'http://services.cngnow.com/V1/Stations.svc/external/filter?'
 
