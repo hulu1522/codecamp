@@ -39,7 +39,6 @@ function geoSuccess(position) {
 function naturalGas(zip) {
 	$("#output").html("");
 
-	var gpsLoc = 
 	var api_url = 'http://services.cngnow.com/V1/Stations.svc/external/filter?'
 
 	if (zip != null && zip != "") {
