@@ -2,6 +2,8 @@ function geoSuccess(position) {
   console.log(position.coords.latitude)
   console.log(position.coords.longitude)
   $("#output").html("");
+  $("#output").append("latitude: "+position.coords.latitude.toString());
+  $("#output").append("longitude: "+position.coords.longitude.toString());
 
   var api_url = 'http://services.cngnow.com/V1/Stations.svc/external/circlefilter?'
 
