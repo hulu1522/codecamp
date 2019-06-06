@@ -1,7 +1,7 @@
 function geoSuccess(position) {
   $("#output").html("");
 
-  var api_url = 'http://services.cngnow.com/V1/Stations.svc/external/circlefilter?'
+  var api_url = 'https://services.cngnow.com/V1/stations.svc/external/circlefilter?'
 
   $.ajax({
 		url: api_url+"latitude="+position.coords.latitude.toString()+"&longitude="+position.coords.longitude.toString()+"&range=15", 
@@ -34,7 +34,7 @@ function geoSuccess(position) {
 function naturalGas(zip) {
 	$("#output").html("");
 
-	var api_url = 'http://services.cngnow.com/V1/Stations.svc/external/filter?'
+	var api_url = 'https://services.cngnow.com/V1/stations.svc/external/filter?'
 
 	if (zip != null && zip != "") {
 		api_url = api_url + "zip=" + zip
@@ -98,5 +98,13 @@ function show(target){
 	}
 }
 
-navigator.geolocation.getCurrentPosition(geoSuccess)
+window.onload = function() {
+	var startPos;
+	var geoSuccess = function(position) {
+	startPos = position;
+		document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+		document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+	};
+	navigator.geolocation.getCurrentPosition(geoSuccess);
+};
 
